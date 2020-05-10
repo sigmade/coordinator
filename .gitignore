@@ -7,5 +7,4 @@
 *.iml
 out
 gen
-!/libs/connect.php
-!/libs/connect.php
+settings/*.php
