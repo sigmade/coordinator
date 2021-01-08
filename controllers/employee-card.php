@@ -9,6 +9,7 @@ if ($_COOKIE['log'] == '') {
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <head>
     <?php
     $website_title = 'Личная карточка сотрудника';
@@ -50,7 +51,7 @@ if ($_COOKIE['log'] == '') {
             ?>
         </div>
     </div>
-    <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
+    <div class="modal fade d-print-none" id="image-modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -66,7 +67,7 @@ if ($_COOKIE['log'] == '') {
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container d-print-none">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <a href="#" class="thumbnail">
@@ -80,8 +81,10 @@ if ($_COOKIE['log'] == '') {
             </div>
 
         </div>
+        <div class="d-print-none">
         <input class='btn btn-outline-primary mt-3 mb-3' onclick='javascript:window.print()' class='btn btn-succes m-2' value='Распечатать'><br>
         <a  href='./employees.php'>Назад к списку</a>
+        </div>
     </div>
 
 </main>
@@ -89,21 +92,12 @@ if ($_COOKIE['log'] == '') {
 <?php require '../blocks/footer.php'; ?>
 
 <script>
-    // После загрузки DOM-дерева (страницы)
     $(function() {
-        //при нажатии на ссылку, содержащую Thumbnail
         $('a.thumbnail').click(function(e) {
-            //отменить стандартное действие браузера
             e.preventDefault();
-            //присвоить атрибуту scr элемента img модального окна
-            //значение атрибута scr изображения, которое обёрнуто
-            //вокруг элемента a, на который нажал пользователь
             $('#image-modal .modal-body img').attr('src', $(this).find('img').attr('src'));
-            //открыть модальное окно
             $("#image-modal").modal('show');
         });
-        //при нажатию на изображение внутри модального окна
-        //закрыть его
         $('#image-modal .modal-body img').on('click', function() {
             $("#image-modal").modal('hide')
         });
