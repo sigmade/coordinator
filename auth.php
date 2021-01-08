@@ -8,7 +8,7 @@
     error_reporting(0);
     $website_title = 'Личный кабинет';
     require 'blocks/head.php';
-    $link = mysqli_connect('37.140.192.157', 'u0681620_mk', 'sychyov0658', 'u0681620_mobylnye-kadry');
+    require '../libs/connect.php';
   ?>
 </head>
 <body>
@@ -71,7 +71,7 @@
                                 <button class="btn btn-danger" id="exit_btn">Выйти</button>
 
                                 <?php
-                              }//    endif;
+                              }
 
                                     ?>
                 </div>
