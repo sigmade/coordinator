@@ -1,4 +1,4 @@
-Coordinator System
+#Coordinator System
 Status of Last Deployment: <br>
 <img src="https://github.com/sigmade/coordinator/workflows/CI/badge.svg?branch=master">
 
