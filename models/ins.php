@@ -11,15 +11,15 @@ header('Location: /controllers/insert.php');
 
 ?>
 <?php
-$data = @$_POST['data'];
+$date = @$_POST['date'];
 $type = @$_POST['type'];
 $quality = @$_POST['quality'];
 $source = @$_POST['source'];
 $local = @$_POST['local'];
 $user = @$_POST['user'];
 $query = "
-INSERT INTO `roba` SET
-`data` = '$data',
+INSERT INTO `overalls` SET
+`date` = '$date',
 `type` = '$type',
 `quality` = '$quality',
 `source` = '$source',

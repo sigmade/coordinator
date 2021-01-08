@@ -20,7 +20,7 @@ require 'blocks/head.php';
                     <p class="lead"><img src="/img/1.png" alt="альтернативный текст" class="img-fluid mt-3 mb-3"></p>
                     </div>
                     <hr class="my-4">
-                    <p>Система учета выдачи и перемещения специальной одежды и средств индивидуальной защиты</p>
+                    <p>Система учета выдачи и перемещения специальной одежды и СИЗ</p>
                     <a href="./auth.php" class="btn btn btn-success">Перейти в личный кабинет</a>
                     </div>
             <div class="col">
