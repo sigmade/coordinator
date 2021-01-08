@@ -48,43 +48,28 @@ require '../libs/connect.php';
 
         $local = @$_POST['act']; // выбранный объект
 
-        $sql_date = "SELECT `data`
-        FROM `roba`
-        WHERE `local`= '$local'
-        ORDER BY `data` ASC LIMIT 1
-        "; //определение последней даты
-
-        $result_date = mysqli_query($link, $sql_date);
         $obj = "все объекты";
 
         if ($local == null) {
 
             $sql = "SELECT `type`,
             SUM(`quality`) AS `total`
-            FROM `roba`
+            FROM `overalls`
             GROUP BY  `type`";
             $obj = "все объекты";
-            $sql_date = "SELECT `data`
-            FROM `roba`
-            ORDER BY `data` DESC LIMIT 1";
-            $result_date = mysqli_query($link, $sql_date);
+
 
         } else {
 
             $sql = "SELECT `type`,
             SUM(`quality`) AS `total`
-            FROM `roba` WHERE `local`= '$local'
+            FROM `overalls` WHERE `local`= '$local'
             GROUP BY  `type`";
             $obj = $local;
         }
 
         echo "Объект: ".$obj."<br>";
 
-        while ($row = mysqli_fetch_array($result_date)) {
-
-          echo "<div class='mt-1 mb-3'>Последняя запись {$row['data']} </div>";
-
-        }
 
         $result = mysqli_query($link, $sql);
         echo "<table class='table table-striped print'>";
