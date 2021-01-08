@@ -8,7 +8,7 @@
     error_reporting(0);
     $website_title = 'Личный кабинет';
     require 'blocks/head.php';
-    require '../libs/connect.php';
+    require 'libs/connect.php';
   ?>
 </head>
 <body>
