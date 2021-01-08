@@ -9,4 +9,4 @@ out
 gen
 settings/*.php
 
-!/libs/connect.php
+/libs/connect.php
