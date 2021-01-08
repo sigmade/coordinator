@@ -80,7 +80,8 @@ if ($_COOKIE['log'] == '') {
             </div>
 
         </div>
-        <input type='button' onclick='javascript:window.print()' class='btn btn-succes m-2' value='Распечатать'><br>
+        <input class='btn btn-outline-primary mt-3 mb-3' onclick='javascript:window.print()' class='btn btn-succes m-2' value='Распечатать'><br>
+        <a  href='./employees.php'>Назад к списку</a>
     </div>
 
 </main>

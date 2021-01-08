@@ -12,6 +12,8 @@ if ($_COOKIE['log'] == '') {
     require '../blocks/head.php';
     include_once ('../libs/connect.php');
     ?>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
 <?php require '../blocks/header.php'; ?>
@@ -19,11 +21,7 @@ if ($_COOKIE['log'] == '') {
     <div class="row">
         <div class="col-md-8 mb-3">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">Список</li>
-                    <li class="breadcrumb-item"><a href="/ins_staff.php">Добавить</a></li>
-                    <li class="breadcrumb-item"><a href="#">Изменить</a></li>
-                </ol>
+                    <a class="btn btn-outline-primary mr-2 mb-2" href="./create-employee.php">Добавить</a>
             </nav>
             <p>
             <form class="form-inline" action="employees.php" method="post">
@@ -40,7 +38,7 @@ if ($_COOKIE['log'] == '') {
               OR `surname` LIKE '%$query%'
               OR `unk` LIKE '%$query%'";
             $result = mysqli_query($link, $sql);
-            echo '<table class="table table-striped print">
+            echo '<table class="table">
             <thead>
             <th>УНК</th>
             <th>ИМЯ</th>
@@ -48,10 +46,10 @@ if ($_COOKIE['log'] == '') {
             while ($row = mysqli_fetch_array($result))
             {
                 echo "<tr><td>{$row['unk']}</td>
-                          <td>{$row['surname']}&nbsp;{$row['name']}&nbsp;{$row['patronymic']}<br>
-                          <a href='./employee-card.php?unk={$row['unk']}' target='_blank'>
-                          <button type='button' class='btn btn-warning'>Подробнее</button>
-                          </a></td></tr>";
+                          <td><a  href='./employee-card.php?unk={$row['unk']}' class='link-info'>
+                          {$row['surname']}&nbsp;{$row['name']}&nbsp;{$row['patronymic']}
+                          </a></td>
+                      </tr>";
             }
             echo '</table>';
             echo mysqli_error($link);
