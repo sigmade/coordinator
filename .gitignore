@@ -8,3 +8,5 @@
 out
 gen
 settings/*.php
+
+!/libs/connect.php
