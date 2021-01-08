@@ -66,7 +66,7 @@ require '../libs/connect.php';
             $obj = "все объекты";
             $sql_date = "SELECT `data`
             FROM `roba`
-            ORDER BY `data` ASC LIMIT 1";
+            ORDER BY `data` DESC LIMIT 1";
             $result_date = mysqli_query($link, $sql_date);
 
         } else {
