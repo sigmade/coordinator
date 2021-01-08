@@ -25,10 +25,12 @@ if ($_COOKIE['log'] == '') {
                     <li class="breadcrumb-item"><a href="#">Изменить</a></li>
                 </ol>
             </nav>
-            <p><form class="form-inline" action="./search_employee.php" method="post">
+            <p>
+            <form class="form-inline" action="employees.php" method="post">
                 <input class="form-control mr-sm-2" type="search" placeholder="Поиск по ФИО, УНК" name="query" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
-            </form></p>
+            </form>
+            </p>
             <?php
             $query = $_POST['query'];
             $query = trim($query);
@@ -47,7 +49,7 @@ if ($_COOKIE['log'] == '') {
             {
                 echo "<tr><td>{$row['unk']}</td>
                           <td>{$row['surname']}&nbsp;{$row['name']}&nbsp;{$row['patronymic']}<br>
-                          <a href='worker.php?unk={$row['unk']}' target='_blank'>
+                          <a href='./employee-card.php?unk={$row['unk']}' target='_blank'>
                           <button type='button' class='btn btn-warning'>Подробнее</button>
                           </a></td></tr>";
             }

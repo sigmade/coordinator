@@ -27,6 +27,9 @@
       <li class="nav-item">
         <a <?php if ($url == "/controllers/extr.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/extr.php">Выдача</a>
       </li>
+        <li class="nav-item">
+            <a <?php if ($url == "/controllers/employees.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/employees.php">Сотрудники</a>
+        </li>
       <li class="nav-item">
         <a <?php if ($url == "/controllers/load.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/load.php">Загрузка документов</a>
       </li>
