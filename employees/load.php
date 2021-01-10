@@ -23,7 +23,7 @@ error_reporting(0);
       <div class="col-md-6 mb-3">
 
         <h5 class=" mb-3"><?= $website_title; ?></h5>
-        <form method="post" enctype="multipart/form-data" action="../models/load.php">
+        <form method="post" enctype="multipart/form-data" action="../models/employees/load.php">
 <div class="form-group">
         <label>Табельный номер сотрудника</label>
         <input type="text" class="form-control" name="dir" placeholder="Пример: 1052">

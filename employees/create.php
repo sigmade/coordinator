@@ -24,7 +24,7 @@ if ($_COOKIE['log'] == '') {
                     <li class="breadcrumb-item"><a href="./employees.php">Список</a></li>
             </ol>
             </nav>
-            <form action="../models/create-employee.php" method="post" class="form-group">
+            <form action="../models/employees/create.php" method="post" class="form-group">
                 <table>
                     <tr><td widht="75">УНК</td><td><input type="text" class="form-control" name="unk"></td></tr>
                     <tr><td widht="75">Фамилия</td><td><input type="text" class="form-control" name="surname"></td></tr>

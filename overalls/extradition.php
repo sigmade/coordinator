@@ -21,7 +21,7 @@ $cookie = $_COOKIE['log'];
       <div class="col-md-6 mb-3">
    
         <h5 class=" mb-3"><?= $website_title; ?></h5>
-        <form action="../models/extr.php" method="post" class="form-group">
+        <form action="../models/overalls/extradition.php" method="post" class="form-group">
         <table class='table'>
           <td widht="75">Вид</td>
               <td><select class="form-control" name="type">
