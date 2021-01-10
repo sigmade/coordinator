@@ -19,19 +19,19 @@
     ?>
 
       <li class="nav-item">
-        <a <?php if ($url == "/controllers/balance.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/balance.php">Остатки</a>
+        <a <?php if ($url == "/overalls/balance.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../overalls/balance.php">Остатки</a>
       </li>
       <li class="nav-item">
-        <a <?php if ($url == "/controllers/insert.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/insert.php">Поступление</a>
+        <a <?php if ($url == "/overalls/arrival.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../overalls/arrival.php">Поступление</a>
       </li>
       <li class="nav-item">
-        <a <?php if ($url == "/controllers/extr.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/extr.php">Выдача</a>
+        <a <?php if ($url == "/overalls/extradition.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../overalls/extradition.php">Выдача</a>
       </li>
         <li class="nav-item">
-            <a <?php if ($url == "/controllers/employees.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/employees.php">Сотрудники</a>
+            <a <?php if ($url == "/employees/employees.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../employees/employees.php">Сотрудники</a>
         </li>
       <li class="nav-item">
-        <a <?php if ($url == "/controllers/load.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../controllers/load.php">Загрузка документов</a>
+        <a <?php if ($url == "/employees/load.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../employees/load.php">Загрузка документов</a>
       </li>
 <?php
     break;
