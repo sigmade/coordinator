@@ -19,15 +19,8 @@
     ?>
 
       <li class="nav-item">
-        <a <?php if ($url == "/overalls/balance.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../overalls/balance.php">Остатки</a>
+        <a <?php if ($url == "/overalls/balance.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../overalls/balance.php">Спецодежда</a>
       </li>
-      <li class="nav-item">
-        <a <?php if ($url == "/overalls/arrival.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../overalls/arrival.php">Поступление</a>
-      </li>
-      <li class="nav-item">
-        <a <?php if ($url == "/overalls/extradition.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../overalls/extradition.php">Выдача</a>
-      </li>
-        <li class="nav-item">
             <a <?php if ($url == "/employees/employees.php") {echo 'class="nav-link active"';} else {echo 'class="nav-link"';}?> href="../employees/employees.php">Сотрудники</a>
         </li>
       <li class="nav-item">
