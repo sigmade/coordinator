@@ -91,8 +91,6 @@ function make_upload($file){
 	copy($file['tmp_name'], "$dir". $name );
 
 
-	//mkdir("img/$text", 0777);
-
 }
 
 function make_upload2($file2){
