@@ -19,6 +19,7 @@ if ($_COOKIE['log'] == '') {
 <main class="container mt-5">
     <div class="row">
         <div class="col-md-8 mb-3">
+            <h3>Редактировать данные</h3>
             <?php
             $id = $_GET['id'];
 
@@ -27,8 +28,8 @@ if ($_COOKIE['log'] == '') {
             $row = mysqli_fetch_array($result);
             echo mysqli_error($link);
             ?>
-            <form action="../models/employees/edit.php" method="post" class="form-group">
-                <table>
+            <form action="../models/employees/edit.php" method="post" class="form-group mt-2">
+                <table class="mt-2">
                     <tr><td widht="75">УНК</td><td><input type="text" class="form-control" name="unk" value='<?=$row['unk']?>'></td></tr>
                     <tr><td widht="75">Фамилия</td><td><input type="text" class="form-control" name="surname" value='<?=$row['surname']?>'></td></tr>
                     <tr><td widht="75">Имя</td><td><input type="text" class="form-control" name="name" value='<?=$row['name']?>'></td></tr>
@@ -65,7 +66,7 @@ if ($_COOKIE['log'] == '') {
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-                                <button type="submit" class="btn btn-primary">Изменить</button>
+                                <button type="submit" class="btn btn-warning">Изменить</button>
                             </div>
                         </div>
                     </div>
